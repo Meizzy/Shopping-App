@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    android:layout_width="174dp"
+    android:layout_height="221dp"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_flash_sale"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/flash_sale" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="7dp"
+            android:src="@drawable/flash_sale_profile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_discount"
+            android:layout_width="49dp"
+            android:layout_height="18dp"
+            android:layout_margin="7dp"
+            android:text="@string/tv_discount"
+            android:textAppearance="@style/flash_price"
+            android:background="@drawable/discount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="35dp"
+            android:layout_height="12dp"
+            android:layout_alignBottom="@id/tv_name"
+            android:background="@drawable/latest"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:textAppearance="@style/phones"
+            app:layout_constraintBottom_toTopOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/phones" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="87dp"
+            android:layout_height="36dp"
+            android:layout_margin="8dp"
+            android:textStyle="bold"
+            android:text="@string/samsung_s10"
+            android:textAppearance="@style/new_balance"
+            app:layout_constraintBottom_toTopOf="@+id/price"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="43dp"
+            android:layout_height="12dp"
+            android:layout_margin="8dp"
+            android:text="@string/flash_sale_price"
+            android:textAppearance="@style/flash_price"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_favorite"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_favorites_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_add" />
+
+        <ImageButton
+            android:id="@+id/btn_add"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_add_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

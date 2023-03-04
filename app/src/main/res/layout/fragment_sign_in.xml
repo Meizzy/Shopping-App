@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.authentication.SignInFragment">
+
+    <TextView
+        android:id="@+id/sign_in"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="127dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/sign_in"
+        android:textAppearance="@style/sign_in" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/first_name"
+        android:layout_width="289dp"
+        android:layout_height="29dp"
+        android:hint="@string/first_name"
+        android:textAppearance="@style/first_name"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="235dp"
+        android:background="@drawable/rectangle_2"/>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/last_name"
+        android:layout_width="289dp"
+        android:layout_height="29dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="299dp"
+        android:background="@drawable/rectangle_3"
+        android:gravity="center"
+        android:hint="@string/last_name"
+        android:textAppearance="@style/last_name"/>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/email"
+        android:layout_width="289dp"
+        android:layout_height="29dp"
+        android:gravity="center"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textAppearance="@style/email"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="363dp"
+        android:background="@drawable/rectangle_5"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="289dp"
+        android:layout_height="46dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/sign_in"
+        android:textAppearance="@style/sign_in_btn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="427dp"
+        android:background="@drawable/button"/>
+
+    <TextView
+        android:id="@+id/already_hav"
+        android:layout_width="129dp"
+        android:layout_height="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="488dp"
+        android:gravity="top"
+        android:text="@string/already_hav"
+        android:textAppearance="@style/already_hav" />
+
+    <TextView
+        android:id="@+id/log_in"
+        android:layout_width="35dp"
+        android:layout_height="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="488dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/log_in"
+        android:textAppearance="@style/log_in" />
+    <ImageView
+        android:id="@+id/vector_google"
+        android:layout_width="23.83dp"
+        android:layout_height="24.22dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="580dp"
+        android:background="@drawable/vector"
+        android:contentDescription="@string/sign_in_wit" />
+
+    <TextView
+        android:id="@+id/sign_in_wit"
+        android:layout_width="117dp"
+        android:layout_height="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="582dp"
+        android:gravity="top"
+        android:text="@string/sign_in_wit"
+        android:textAppearance="@style/sign_in_wit" />
+
+    <ImageView
+        android:id="@+id/vector"
+        android:layout_width="18.38dp"
+        android:layout_height="21.87dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="638dp"
+        android:background="@drawable/vector_apple"
+        android:contentDescription="@string/sign_in_apple" />
+
+    <TextView
+        android:id="@+id/sign_in_apple"
+        android:layout_width="107dp"
+        android:layout_height="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="640.22dp"
+        android:gravity="center"
+        android:text="@string/sign_in_apple"
+        android:textAppearance="@style/sign_in_apple" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

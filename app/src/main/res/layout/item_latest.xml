@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    android:layout_width="114dp"
+    android:layout_height="149dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_latest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_latest" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="35dp"
+            android:layout_height="12dp"
+            android:layout_alignBottom="@id/tv_name"
+            android:background="@drawable/latest"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:textAppearance="@style/phones"
+            app:layout_constraintBottom_toTopOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/phones" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="75dp"
+            android:layout_height="26dp"
+            android:layout_margin="8dp"
+            android:text="@string/samsung_s10"
+            android:textAppearance="@style/samsung_s10"
+            app:layout_constraintBottom_toTopOf="@+id/price"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="40dp"
+            android:layout_height="9dp"
+            android:layout_margin="8dp"
+            android:text="@string/tv_price"
+            android:textAppearance="@style/price"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_add"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_add_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

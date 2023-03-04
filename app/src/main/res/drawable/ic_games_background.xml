@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_background"/>
+    <item android:drawable="@drawable/ic_gamepad"
+        android:gravity="center"
+        android:width="19.87dp"
+        android:height="9.93dp"/>
+</layer-list>
