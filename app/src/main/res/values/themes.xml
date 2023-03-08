@@ -314,4 +314,106 @@
     </item>
 
 </style>
+    <style name="details_name_style">
+
+        <item name="android:textSize">
+            17sp
+        </item>
+
+        <item name="android:letterSpacing">
+            -0.02
+        </item>
+
+        <item name="android:textColor">
+            #161826
+        </item>
+
+    </style>
+    <style name="details_price">
+
+        <item name="android:textSize">
+            13sp
+        </item>
+
+        <item name="android:letterSpacing">
+            -0.02
+        </item>
+
+        <item name="android:textColor">
+            #161826
+        </item>
+
+    </style>
+    <style name="features">
+
+        <item name="android:textSize">
+            9sp
+        </item>
+
+        <item name="android:letterSpacing">
+            -0.03
+        </item>
+
+        <item name="android:textColor">
+            #808080
+        </item>
+
+    </style>
+    <style name="details_ratings">
+
+        <item name="android:textSize">
+            9sp
+        </item>
+
+        <item name="android:letterSpacing">
+            -0.03
+        </item>
+
+        <item name="android:textColor">
+            #161826
+        </item>
+
+    </style><style name="color_">
+
+    <item name="android:textSize">
+        10sp
+    </item>
+
+    <item name="android:letterSpacing">
+        -0.03
+    </item>
+
+    <item name="android:textColor">
+        #737373
+    </item>
+
+</style><style name="total_style">
+
+    <item name="android:textSize">
+        8sp
+    </item>
+
+    <item name="android:letterSpacing">
+        -0.04
+    </item>
+
+    <item name="android:textColor">
+        #99A0FF
+    </item>
+
+</style><style name="add_to_cart">
+
+    <item name="android:textSize">
+        8sp
+    </item>
+
+    <item name="android:letterSpacing">
+        -0.04
+    </item>
+
+    <item name="android:textColor">
+        #FFFFFF
+    </item>
+
+</style>
 </resources>

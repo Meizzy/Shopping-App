@@ -1,6 +1,5 @@
 package com.brujiyaseer.shoppingapp.presentation.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -17,7 +16,7 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-private const val TAG = "MainViewModel"
+//private const val TAG = "MainViewModel"
 
 @HiltViewModel
 class MainViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
@@ -40,7 +39,7 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
         val latestGoods = latestGoodsDeferred.await()
         val flashSaleGoods = flashSaleGoodsDeferred.await()
 
-        Log.d(TAG, "goods are $latestGoods and $flashSaleGoods")
+//        Log.d(TAG, "goods are $latestGoods and $flashSaleGoods")
 
         if (latestGoods is Resource.Success && flashSaleGoods is Resource.Success) {
             val latestGoodsResponse = latestGoods.value.map {
@@ -68,12 +67,15 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
                 GoodsSectionItem(
                     title = "Flash Sale",
                     goods = flashSaleGoodsResponse
+                ),
+                GoodsSectionItem(
+                    title = "Brands",
+                    goods = latestGoodsResponse
                 )
             )
             _homeGoodsLiveData.postValue(Resource.Success(goodsSectionResponse))
         } else {
             _homeGoodsLiveData.postValue(latestGoods as Resource.Failure)
-            _homeGoodsLiveData.postValue(flashSaleGoods as Resource.Failure)
         }
 
     }

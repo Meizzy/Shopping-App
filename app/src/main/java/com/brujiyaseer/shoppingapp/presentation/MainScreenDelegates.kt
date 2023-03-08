@@ -11,10 +11,15 @@ import com.brujiyaseer.shoppingapp.domain.model.GoodsSectionItem
 import com.brujiyaseer.shoppingapp.domain.model.Latest
 import com.brujiyaseer.shoppingapp.presentation.adapters.GoodsItemAdapter
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
 private const val TAG = "MainScreenDelegates"
+
 object MainScreenDelegates {
+
 
     fun goodsSectionDelegate() =
         adapterDelegateViewBinding<GoodsSectionItem, ListItem, ItemGoodsSectionBinding>({ layoutInflater, parent ->
@@ -23,13 +28,16 @@ object MainScreenDelegates {
             )
         }) {
             //onCreateViewHolder
-            val adapter = GoodsItemAdapter()
-            Log.d(TAG, "adapter called ${item.goods}")
-            binding.placeRecycler.adapter = adapter
+
             bind {
                 // onBindViewHolder
+//                binding.placeRecycler.adapter = adapter
+                val adapter = GoodsItemAdapter()
+//                adapter.notifyDataSetChanged()
+                Log.d(TAG, "adapter called ${item.goods}")
+                binding.placeRecycler.adapter = adapter
                 Log.d(TAG, item.goods.toString())
-                binding.tvTitle.text = getString(R.string.latest)//item.title
+                binding.tvTitle.text = item.title
                 adapter.items = item.goods
             }
         }
@@ -44,10 +52,18 @@ object MainScreenDelegates {
         }) {
             bind {
                 with(binding) {
+                    val radius = 16f
                     tvName.text = item.name
-                    price.text = item.price.toString()
+                    price.text = getString(R.string.tv_price, item.price.toString())
                     category.text = item.category
-                    Glide.with(context).load(item.image_url).into(imageLatest)
+                    Glide.with(context)
+                        .load(item.image_url)
+                        .transform(
+                            CenterCrop(),
+                            GranularRoundedCorners(radius, radius, radius, radius)
+                        )
+                        .transition(DrawableTransitionOptions.withCrossFade())
+                        .into(imageLatest)
                 }
             }
         }
@@ -62,11 +78,16 @@ object MainScreenDelegates {
         }) {
             bind {
                 with(binding) {
+                    val radius = 16f
                     tvName.text = item.name
-                    price.text = item.price.toString()
+                    price.text = getString(R.string.flash_sale_price, item.price.toString())
                     category.text = item.category
-                    tvDiscount.text = item.discount.toString()
-                    Glide.with(context).load(item.image_url).into(imageFlashSale)
+                    tvDiscount.text = getString(R.string.tv_discount, item.discount.toString())
+                    Glide.with(context)
+                        .load(item.image_url)
+                        .transform(GranularRoundedCorners(radius, radius, radius, radius))
+                        .transition(DrawableTransitionOptions.withCrossFade())
+                        .into(imageFlashSale)
                 }
             }
 

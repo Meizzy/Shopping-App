@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
-            android:scaleType="fitStart"
+            android:scaleType="centerInside"
             android:src="@drawable/flash_sale" />
 
         <com.google.android.material.imageview.ShapeableImageView

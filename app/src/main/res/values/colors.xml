@@ -10,4 +10,5 @@
 
     <color name="checked_color">#BDBDBD</color>
     <color name="background_color">#EEEE</color>
+    <color name="fill_color">#E5E9EF</color>
 </resources>

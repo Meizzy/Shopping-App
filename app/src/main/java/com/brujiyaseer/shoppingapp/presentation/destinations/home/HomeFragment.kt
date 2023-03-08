@@ -38,18 +38,17 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         }
 
         binding.tvSearch.setOnClickListener {
-            activity?.findNavController(R.id.nav_host_main)
-                ?.navigate(R.id.action_navigation_main_to_navigation_search)
+            findNavController().navigate(R.id.action_navigation_home_to_navigation_details)
         }
 
         with(binding) {
+//            recyclerView.requestLayout()
             recyclerView.adapter = adapter
+//            adapter.items = ArrayList()
 
             viewModel.homeGoodsLiveData.observe(viewLifecycleOwner) {
                 when (it) {
                     is Resource.Success -> {
-//                        Log.d(TAG,  it.value.toString())
-                        requireActivity().snackBar("success")
                         progressBar.visible(false)
                         adapter.items = it.value
                     }
