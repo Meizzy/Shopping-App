@@ -67,7 +67,7 @@ class FragmentSearch : BaseFragment<FragmentSearchBinding>(FragmentSearchBinding
     }
 
     override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-        if (menuItem.itemId == android.R.id.home){
+        if (menuItem.itemId == android.R.id.home) {
             findNavController().navigate(R.id.action_navigation_search_to_navigation_main)
             Log.d(TAG, "onBackPressed")
             return true

@@ -10,7 +10,6 @@ import com.brujiyaseer.shoppingapp.databinding.AppBarMainBinding
 
 class ContentMainFragment : BaseFragment<AppBarMainBinding>(AppBarMainBinding::inflate) {
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val navController =
             requireActivity().findNavController(R.id.nav_host_fragment_activity_main)

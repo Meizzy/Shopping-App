@@ -23,7 +23,7 @@ private const val TAG = "HomeFragment"
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
-    private val adapter = MainScreenAdapter()
+    private val adapter = MainScreenAdapter { onClick() }
     private val viewModel: MainViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -38,7 +38,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         }
 
         binding.tvSearch.setOnClickListener {
-            findNavController().navigate(R.id.action_navigation_home_to_navigation_details)
+            activity?.findNavController(R.id.nav_host_main)
+                ?.navigate(R.id.action_navigation_main_to_navigation_search)
         }
 
         with(binding) {
@@ -54,7 +55,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
                     }
                     is Resource.Failure -> {
                         val msg = it.exception.message.toString()
-                        Log.d(TAG,  msg)
+                        Log.d(TAG, msg)
                         progressBar.visible(false)
                         requireActivity().snackBar(msg)
                     }
@@ -64,5 +65,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
         }
 
+    }
+
+    private fun onClick() {
+        findNavController().navigate(R.id.action_navigation_home_to_navigation_details)
     }
 }

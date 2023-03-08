@@ -14,6 +14,7 @@ import com.brujiyaseer.shoppingapp.presentation.viewmodel.SignInViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 private const val TAG = "SignInFragment"
+
 @AndroidEntryPoint
 class SignInFragment : BaseFragment<FragmentSignInBinding>(FragmentSignInBinding::inflate) {
 

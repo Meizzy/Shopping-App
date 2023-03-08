@@ -16,7 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBinding::inflate) {
 
     private val viewModel: SignInViewModel by activityViewModels()
-    private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()){
+    private val getContent = registerForActivityResult(ActivityResultContracts.GetContent()) {
         binding.profilePic.setImageURI(it)
     }
 

@@ -61,16 +61,11 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
             }
             val goodsSectionResponse = listOf(
                 GoodsSectionItem(
-                    title = "Latest",
-                    goods = latestGoodsResponse
-                ),
-                GoodsSectionItem(
-                    title = "Flash Sale",
-                    goods = flashSaleGoodsResponse
-                ),
-                GoodsSectionItem(
-                    title = "Brands",
-                    goods = latestGoodsResponse
+                    title = "Latest", goods = latestGoodsResponse
+                ), GoodsSectionItem(
+                    title = "Flash Sale", goods = flashSaleGoodsResponse
+                ), GoodsSectionItem(
+                    title = "Brands", goods = latestGoodsResponse
                 )
             )
             _homeGoodsLiveData.postValue(Resource.Success(goodsSectionResponse))

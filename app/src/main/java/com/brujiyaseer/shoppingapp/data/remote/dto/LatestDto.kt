@@ -7,8 +7,8 @@ data class LatestDto(
     val image_url: String,
     val name: String,
     val price: Int
-){
-    fun toLatest(): Latest{
+) {
+    fun toLatest(): Latest {
         return Latest(
             category,
             image_url,

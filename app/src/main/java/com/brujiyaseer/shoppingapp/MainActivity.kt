@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val inflater = navHostFragment.navController.navInflater
         val graph = inflater.inflate(R.navigation.mobile_navigation)
 
-        graph.setStartDestination(R.id.navigation_sign_in)
+        graph.setStartDestination(R.id.navigation_main)
 //        if (false) {
 //            graph.setStartDestination(R.id.navigation_sign_in)
 //        } else {

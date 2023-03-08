@@ -5,8 +5,9 @@ import com.brujiyaseer.shoppingapp.core.base.ListItem
 import com.brujiyaseer.shoppingapp.presentation.MainScreenDelegates
 import com.hannesdorfmann.adapterdelegates4.AsyncListDifferDelegationAdapter
 
-class MainScreenAdapter: AsyncListDifferDelegationAdapter<ListItem>(BaseDiffUtilItemCallback()) {
+class MainScreenAdapter(onClick: () -> Unit) :
+    AsyncListDifferDelegationAdapter<ListItem>(BaseDiffUtilItemCallback()) {
     init {
-        delegatesManager.addDelegate(MainScreenDelegates.goodsSectionDelegate())
+        delegatesManager.addDelegate(MainScreenDelegates.goodsSectionDelegate(onClick))
     }
 }
