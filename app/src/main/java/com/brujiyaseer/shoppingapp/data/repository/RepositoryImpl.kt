@@ -21,8 +21,8 @@ class RepositoryImpl(private val goodsApi: GoodsApi, private val dao: UserDao) :
     override suspend fun getFlashSaleGoods(): Resource<List<FlashSale>> =
         safeApiCall { goodsApi.getFlashSaleList().flash_sale.map { it.toFlashSale() } }
 
-    override suspend fun getSearchedGoods(): Resource<List<Search>> =
-        safeApiCall { goodsApi.getSearchList().map { it.toSearch() } }
+    override suspend fun getSearchedGoods(): Resource<Search> =
+        safeApiCall { goodsApi.getSearchList().toSearch() }
 
     override suspend fun getDetailsOfGoods(): Resource<Details> =
         safeApiCall { goodsApi.getDetailsList().toDetails() }

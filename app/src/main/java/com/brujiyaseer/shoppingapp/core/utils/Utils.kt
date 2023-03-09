@@ -31,8 +31,7 @@ fun Activity.snackBar(msg: String, action: (() -> Unit)? = null) {
 }
 
 inline fun <V : View> V.onClick(
-    throttleDuration: Long = DEFAULT_THROTTLE_DURATION_IN_MILLIS,
-    crossinline listener: () -> Unit
+    throttleDuration: Long = DEFAULT_THROTTLE_DURATION_IN_MILLIS, crossinline listener: () -> Unit
 ): V {
     setOnClickListener(SafeClickListener(throttleDuration) { listener.invoke() })
     return this

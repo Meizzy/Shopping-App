@@ -28,18 +28,13 @@ object AppModule {
     @Singleton
     @Provides
     fun provideDataBase(app: Application): AppDatabase {
-        return Room
-            .databaseBuilder(app, AppDatabase::class.java, DATABASE_NAME)
-            .build()
+        return Room.databaseBuilder(app, AppDatabase::class.java, DATABASE_NAME).build()
     }
 
     @Singleton
     @Provides
     fun provideGoodsApi(): GoodsApi {
-        return Retrofit.Builder()
-            .baseUrl(GoodsApi.BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(GoodsApi::class.java)
+        return Retrofit.Builder().baseUrl(GoodsApi.BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create()).build().create(GoodsApi::class.java)
     }
 }

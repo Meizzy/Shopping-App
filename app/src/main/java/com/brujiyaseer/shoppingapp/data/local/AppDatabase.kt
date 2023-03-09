@@ -8,8 +8,7 @@ const val DATABASE_NAME = "UserDatabase.db"
 private const val DATABASE_VERSION = 1
 
 @Database(
-    entities = [User::class],
-    version = DATABASE_VERSION
+    entities = [User::class], version = DATABASE_VERSION
 )
 abstract class AppDatabase : RoomDatabase() {
 

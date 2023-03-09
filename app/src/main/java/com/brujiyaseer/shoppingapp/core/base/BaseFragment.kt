@@ -17,14 +17,15 @@ abstract class BaseFragment<VB : ViewBinding>(
         get() = _binding as VB
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         _binding = bindingInflater.invoke(inflater)
-        if (_binding == null)
-            throw IllegalArgumentException("Binding cannot be null")
+        if (_binding == null) throw IllegalArgumentException("Binding cannot be null")
         return binding.root
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

@@ -12,7 +12,7 @@ interface Repository {
 
     suspend fun getLatestGoods(): Resource<List<Latest>>
     suspend fun getFlashSaleGoods(): Resource<List<FlashSale>>
-    suspend fun getSearchedGoods(): Resource<List<Search>>
+    suspend fun getSearchedGoods(): Resource<Search>
     suspend fun getDetailsOfGoods(): Resource<Details>
     suspend fun saveUser(user: User): Long
     suspend fun deleteUser()

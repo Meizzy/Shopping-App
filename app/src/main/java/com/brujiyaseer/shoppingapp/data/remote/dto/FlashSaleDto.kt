@@ -11,11 +11,7 @@ data class FlashSaleDto(
 ) {
     fun toFlashSale(): FlashSale {
         return FlashSale(
-            category,
-            discount,
-            image_url,
-            name,
-            price
+            category, discount, image_url, name, price
         )
     }
 }

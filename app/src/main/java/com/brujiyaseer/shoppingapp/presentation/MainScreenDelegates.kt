@@ -53,8 +53,8 @@ object MainScreenDelegates {
                     price.text = getString(R.string.tv_price, item.price.toString())
                     category.text = item.category
                     Glide.with(context).load(item.image_url).transform(
-                            CenterCrop(), GranularRoundedCorners(radius, radius, radius, radius)
-                        ).transition(DrawableTransitionOptions.withCrossFade()).into(imageLatest)
+                        CenterCrop(), GranularRoundedCorners(radius, radius, radius, radius)
+                    ).transition(DrawableTransitionOptions.withCrossFade()).into(imageLatest)
                 }
             }
         }
@@ -75,9 +75,9 @@ object MainScreenDelegates {
                     price.text = getString(R.string.flash_sale_price, item.price.toString())
                     category.text = item.category
                     tvDiscount.text = getString(R.string.tv_discount, item.discount.toString())
-                    Glide.with(context).load(item.image_url)
-                        .transform(GranularRoundedCorners(radius, radius, radius, radius))
-                        .transition(DrawableTransitionOptions.withCrossFade()).into(imageFlashSale)
+                    Glide.with(context).load(item.image_url).transform(
+                            CenterCrop(), GranularRoundedCorners(radius, radius, radius, radius)
+                        ).transition(DrawableTransitionOptions.withCrossFade()).into(imageFlashSale)
 
                     binding.root.onClick { onGameClick.invoke() }
                 }

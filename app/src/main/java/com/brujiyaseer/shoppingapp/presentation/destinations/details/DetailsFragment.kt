@@ -84,8 +84,7 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(FragmentDetailsBind
 
             btnMinus.setOnClickListener {
 
-                if (quantity > 0)
-                    quantity--
+                if (quantity > 0) quantity--
                 tvQuantity.text = getString(R.string.quantity, quantity)
                 tvTotalPrice.text = getString(R.string.total_price, details.price * quantity)
             }

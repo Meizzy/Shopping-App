@@ -14,13 +14,7 @@ data class DetailsDto(
 ) {
     fun toDetails(): Details {
         return Details(
-            colors,
-            description,
-            image_urls,
-            name,
-            number_of_reviews,
-            price,
-            rating
+            colors, description, image_urls, name, number_of_reviews, price, rating
         )
     }
 }
